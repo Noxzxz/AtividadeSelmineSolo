@@ -10,9 +10,6 @@ def verificar_carregador(sequencia):
         if posicao % 4 == 0:
             if bala != 0:
                 return False
-        else:
-            if bala == 0:
-                return False
         
         posicao += 1
     

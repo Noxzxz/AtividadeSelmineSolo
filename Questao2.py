@@ -1,4 +1,4 @@
-def pile_shuffle(cartas, k):
+def embaralhar(cartas, k):
     # Distribuição em k pilhas (LIFO)
     pilhas = [[] for _ in range(k)]
     for i, carta in enumerate(cartas):
@@ -22,11 +22,16 @@ def main():
     m = int(input("Digite o valor de m (número de pilhas na 2ª iteração - deve ser primo em relação a k): "))
     
     # Primeira Iteração
-    passo1 = pile_shuffle(cartas, k)
-    
+    passo1 = embaralhar(cartas, k)
+    print(f"Resultado primeira iteração (após k={k}): {passo1}")
+
+
     # Segunda Iteração
-    resultado = pile_shuffle(passo1, m)
+    resultado = embaralhar(passo1, m)
     print(f"Resultado final (após m={m}): {resultado}")
+
+
+
 
 if __name__ == "__main__":
     main()
